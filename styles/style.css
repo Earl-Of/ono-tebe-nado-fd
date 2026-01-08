@@ -30,6 +30,7 @@ nav ul li {
     font-size: 18px;
     font-weight: normal;
     color: #000;
+    letter-spacing: 0px; /* если нужно */
 }
 
 .menu_home {
@@ -53,8 +54,8 @@ nav ul li {
 .menu_home::after {
     content: "";
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     background: white;
     border: 1px solid black;
     border-radius: 50%;
@@ -65,8 +66,8 @@ nav ul li {
 .menu_lot::after {
     content: "";
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     background: white;
     border: 1px solid black;
     border-radius: 50%;
@@ -77,8 +78,8 @@ nav ul li {
 .logo {
     grid-column: 2;
     grid-row: 1;
-    margin-top: 92px;
-    margin-left: 36.5px;
+    margin-top: 90px;
+    margin-left: 35px;
     position: relative;
     width: 148px;
     height: 105px;
@@ -94,8 +95,8 @@ nav ul li {
 
 .logo-top {
     position: absolute;
-    top: 2px;
-    left: 44%;
+    top: 1px;
+    left: 50px;
     transform: translateX(-50%);
     width: 130px;
     height: 104px;
@@ -104,8 +105,8 @@ nav ul li {
 address {
     grid-column: 3;
     grid-row: 1;
-    margin-top: 95px;
-    margin-left: 184px;
+    margin-top: 92px;
+    margin-left: 166px;
     text-align: left;
     text-decoration-thickness: 1px;
     text-underline-offset: 5px;
@@ -114,4 +115,132 @@ address {
     line-height: 1.4;
     color: #000;
     white-space: nowrap;
+}
+
+/* ===== СЕКЦИЯ COVER ===== */
+.cover {
+    position: relative;
+    width: 1100px;
+    min-height: 757px;
+    margin: 0 auto 0;
+    
+    /* Фон сдвинут влево на ~3см */
+    background: url('../images/cover.jpg') no-repeat 50% center / cover;
+    
+    /* Альтернатива если % не работает: */
+    /* background: url('../images/cover.jpg') no-repeat -30px center / cover; */
+    
+    /* Для переполнения фона */
+    overflow: hidden;
+}
+
+/* ===== OVERLAY (переиспользуемый) ===== */
+.overlay {
+    position: absolute;
+    inset: 0; /* современный способ вместо top:0; left:0; right:0; bottom:0; */
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.cover_title {
+      position: absolute;
+    top: 165px;
+    left: 50px;
+    z-index: 2;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+    /* Вариант А: Flex колонка */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aligned-text {
+    font-size: 100px;
+    line-height: 1;
+    
+    /* Если не flex, то так: */
+    display: block;
+}
+
+/* Ступеньки */
+.aligned-text_left {
+     letter-spacing: 30px; /* увеличенные пробелы между О-Н-О */
+    
+    /* Если нужно опустить ниже */
+    position: relative;
+    left: -5px;
+    top: 5px; /* опускаем на 10px вниз */
+    
+    /* Или через margin */
+    margin-top: 1px; /* было 165px, стало 175px */
+}
+
+.aligned-text_center {
+     /* ТЕБЕ */
+    position: absolute;
+    top: 142px;
+    left: 325px; /* ← ИЗМЕНИТЬ НА БОЛЬШЕЕ ЗНАЧЕНИЕ */
+    letter-spacing: 30px; /* если нужно для "ТЕБЕ" */
+}
+
+.aligned-text_right {
+    position: absolute;
+    top: 276px;
+    left: 606px; /* ← ИЗМЕНИТЬ НА БОЛЬШЕЕ ЗНАЧЕНИЕ */
+    letter-spacing: 30px; /* если нужно для "ТЕБЕ" */
+}
+
+/* ===== ПОДЗАГОЛОВОК И КНОПКА ===== */
+.cover_description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 52px;
+    background: transparent;
+    text-transform: uppercase;
+    bottom: 28px; /* подняли на 30px от низа */
+}
+
+.cover_description-text {
+    color: white;
+    font-size: 22px;
+    word-spacing: 18px; /* ← ВАЖНО! из методички */
+    /* или */
+    padding-left: 30px;
+    margin-left: -36px; /* сдвинули вправо на 20px */
+    margin-bottom: -3px; /* дополнительно подняли */
+}
+
+.bet-button {
+    /* Сброс */
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    
+    /* Стили по макету */
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    text-transform: uppercase;
+    word-spacing: 13px; /* ← ВАЖНО! из методички */
+    margin-right: 5px; /* левее */
+    letter-spacing: 1px; /* сжать буквы */
+    padding: 9px 30px 14px 28px; /* подстроить отступы */
+    line-height: 1.4; /* контролировать высоту строк */
+}
+
+.bet-button_second {
+    margin-left: -8px; /* сдвигаем левее */
+    display: inline-block;
 }
