@@ -256,6 +256,12 @@ address {
     text-decoration: none;
 }
 
+.card-link {
+    text-decoration: none;
+}
+
+
+
 .card_type_film {
     background: url('../images/card-lot-01.jpg') center/cover;
 }
@@ -284,6 +290,11 @@ address {
     font-size: 22px;
     text-transform: uppercase;
     margin: 48px 40px 30px 40px;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
 }
 
 .card_text{
@@ -292,6 +303,8 @@ address {
     font-size: 20px;
     line-height: 1.2;
     margin: auto 40px 48px 40px;
+    color: white;
+    text-decoration: none;
 }
 
 .lots_look-more-link {
@@ -304,3 +317,55 @@ address {
 }
 
 /* Блок ABOUT */
+.about {
+    width: 1052px;
+    height: 595px;
+    display: grid;
+    grid-template-columns: 334px 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+}
+
+.about__logo {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    margin: 155px 0 0 69px;
+    grid-column: 1;
+    grid-row: 1;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.about__logo-circle {
+    width: 100%;
+    height: 100%;
+}
+
+.about__logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 148px;
+    height: 114px;
+}
+
+.about__title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 254px 24px 100px 21px;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.about__text {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 403px 0 0 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    width: 693px;
+}
