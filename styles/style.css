@@ -369,3 +369,75 @@ address {
     line-height: 1.2;
     width: 693px;
 }
+
+/* Блок FOOTER */
+.footer {
+    width: 1100px;
+    height: 400px;
+    position: relative;
+    margin-bottom: 82px;
+}
+
+.footer__social-list {
+    position: absolute;
+    top: 300px;
+    right: 55px;
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__social-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.footer__menu {
+    position: absolute;
+    top: 166px;
+    left: 545px;
+    transform: translateX(-50%);
+}
+
+.footer__menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.footer__menu-list-item {
+    display: block;
+    margin-bottom: 1px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.footer__menu-link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    line-height: 1.2;
+    display: block;
+}
+
+.location {
+    position: absolute;
+    top: 205px;
+    left: -119px;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.footer__menu-list-item:nth-child(2) .footer__menu-link,
+.footer__menu-list-item:nth-child(3) .footer__menu-link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.footer__menu-list-item:first-child .footer__menu-link {
+    text-decoration: none;
+}
