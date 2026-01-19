@@ -52,13 +52,15 @@ header {
     text-decoration: none;
 }
 
-.top__address {
-    grid-column: 3;
+address {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-style: normal;
     font-size: 18px;
+}
+.address_header {
+    grid-column: 3;
     gap: 4px;
     margin-top: 106px;
     margin-right: 47px;
@@ -291,20 +293,10 @@ header {
     margin-bottom: 82px;
 }
 
-.address_bottom {
+.address_footer {
     grid-column: 1;
-    font-style: normal;
-    font-size: 18px;
     line-height: 1.4;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     gap: 0px;
-}
-
-.address__link {
-    text-decoration: underline;
-    text-underline-offset: 4px;
 }
 
 .nav__bottom{
